@@ -8,5 +8,8 @@ def sumar_recursiva(lista, PI, PF):
     pos_inicial = 2
     pos_final = 3
     
+resultado = sumar_recursiva(lista, pos_inicial, pos_final)
+print("El resultado de la suma es:", resultado)  
+    
     
     

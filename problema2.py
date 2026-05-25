@@ -1,15 +1,27 @@
-def sumar_recursiva(lista, PI, PF):
-    if PI > PF:
-        return 0
-    else:
-        return lista[PI] + sumar_recursiva(lista, PI + 1, PF)
 
-    lista = [2, 4, 6, 3]
-    pos_inicial = 2
-    pos_final = 3
+def suma_recursiva(lista, pi, pf):
+    # caso base
+    if pi > pf:
+        return 0
     
-resultado = sumar_recursiva(lista, pos_inicial, pos_final)
-print("El resultado de la suma es:", resultado)  
+    return lista[pi] + suma_recursiva(lista, pi + 1, pf)
+
+lista = []
+n = int(input("Ingrese el tamaño de la lista: "))
+
+for i in range(n):
+    num = int(input(f"Ingrese número {i+1}: "))
+    lista.append(num)
+
+print("Lista:", lista)
+
+pi = int(input("Ingrese posición inicial (PI): "))
+pf = int(input("Ingrese posición final (PF): "))
+
+resultado = suma_recursiva(lista, pi-1, pf-1)
+
+print("La suma es:", resultado)
+     
     
     
     
